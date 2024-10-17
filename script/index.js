@@ -35,7 +35,7 @@ function displayValue() {
   .then(data => {
     let variables = data.data.split(' ; ');
     let fulldate = variables[0];
-
+    fulldate = fulldate.replace(/ь/g, 'я').replace(/Ь/g, 'я');
     console.log(fulldate);
 
     let data_elements = document.querySelectorAll('#date_time');
