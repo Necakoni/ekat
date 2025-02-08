@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nspk</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+	<script src="https://puzzlebot.top/webapp.js"></script>
+    <link rel="manifest" href="pwa.webmanifest" />
+    <link rel="stylesheet" href="css/nspk.css">
+</head>
+<body>
+    <header>
+        Уведомление об оплате
+    </header>
+    <main>
+        <h1>Вернуться к оплаченным поездкам</h1>
+        <div class="sbp"></div>
+        <p>Ваш проезд успешно оплачен!
+            <br>Чтобы сохранить реквизиты билета, нажмите кнопку «Скачать билет»
+        </p>
+        <p class="p_left">
+            Серия билета: <span id="series"></span>
+            <br>Номер билета: <span id="number"></span>
+            <br>Дата/время поездки: <span id="date_time"></span>
+            <br>Автобус: <span id="bus"></span>
+            <br>Стоимость: <span id="price">29.00 руб.</span>
+        </p>
+        <p>
+            С момента оплаты прошло:
+            <br><span id="timer"></span>
+            <br>QR-код билета для предъявления контролеру
+        </p>
+        <img class="qr" src="/res/qr.png">
+        <button>Скачать билет</button>
+    </main>
+
+    <div class="fon hidden"></div>
+    <div class="container hidden">
+        <div class="input-container">
+          <input class="inp_id"type="text" id="inputValue" placeholder="Введите ID">
+          <button class="btn_id" onclick="saveData()">Сохранить</button>
+        </div>
+    </div>
+    
+</body>
+<script src="/script/nspk.js"></script>
+</html>
